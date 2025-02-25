@@ -53,45 +53,35 @@
     <section class="container my-5">
         <div class="row g-4">
             <div class="col-md-4 col-sm-6">
-                <div class="card p-3 text-center" onclick="openPopup('Introduction to Coding', 'Learn the basics of programming with fun, hands-on activities.')">
-                    <img src="https://cms-assets.themuse.com/media/lead/01212022-1047259374-coding-classes_scanrail.jpg" class="img-fluid" alt="Coding Class">
-                    <h5 class="mt-2">Introduction to Coding</h5>
-                    <p>Learn the basics of programming with fun, hands-on activities.</p>
+                <div class="card p-3 text-center" onclick="openPopup('Creative 3D Design', 'Design and print 3D models using beginner-friendly software.')">
+                    <img src="https://vivaldi.com/wp-content/uploads/2017/06/ndc-workshop-3d.jpg" class="img-fluid" alt="3D Design Class">
+                    <h5 class="mt-2">Creative 3D Design</h5>
+                    <p>Design and print 3D models using beginner-friendly software.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="card p-3 text-center" onclick="openPopup('Robotics for Beginners', 'Build and program robots using beginner-friendly kits.')">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp_hdcTrM_BbZnil28zVMTRcQUG91WDv8ylg&s" class="img-fluid" alt="Robotics Class">
-                    <h5 class="mt-2">Robotics for Beginners</h5>
-                    <p>Build and program robots using beginner-friendly kits.</p>
+                <div class="card p-3 text-center" onclick="openPopup('Circuit Fundamentals', 'Learn the basics of electrical circuits and build simple projects.')">
+                    <img src="https://cdn.britannica.com/42/100742-004-9C5F5E40.jpg" class="img-fluid" alt="Circuits Class">
+                    <h5 class="mt-2">Circuit Fundamentals</h5>
+                    <p>Learn the basics of electrical circuits and build simple projects.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card p-3 text-center" onclick="openPopup('STEAM Art & Design', 'Explore the intersection of technology and creativity through art projects.')">
+                    <img src="https://innovationkidslab.com/wp-content/uploads/2015/04/artbot_fb_sm_size.jpg" class="img-fluid" alt="Art and Design Class">
+                    <h5 class="mt-2">STEAM Art & Design</h5>
+                    <p>Explore the intersection of technology and creativity through art projects.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card p-3 text-center" onclick="openPopup('Engineering Challenges', 'Solve fun and interactive engineering problems with hands-on activities.')">
+                    <img src="https://cambridgedaymediafiles.s3.amazonaws.com/public_html/wp-content/uploads/2018/09/27175850/090118i-Engineering-is-Elementary.jpg" class="img-fluid" alt="Engineering Class">
+                    <h5 class="mt-2">Engineering Challenges</h5>
+                    <p>Solve fun and interactive engineering problems with hands-on activities.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Class Popup -->
-    <div id="popup-overlay" class="popup-overlay"></div>
-    <div id="classPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2 id="popupTitle"></h2>
-            <p id="popupDescription"></p>
-            <button class="btn btn-primary">Sign Up</button>
-        </div>
-    </div>
-
-    <script>
-        function openPopup(title, description) {
-            document.getElementById("popupTitle").innerText = title;
-            document.getElementById("popupDescription").innerText = description;
-            document.getElementById("classPopup").style.display = "block";
-            document.getElementById("popup-overlay").style.display = "block";
-        }
-        function closePopup() {
-            document.getElementById("classPopup").style.display = "none";
-            document.getElementById("popup-overlay").style.display = "none";
-        }
-    </script>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-light">
