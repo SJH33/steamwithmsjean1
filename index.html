@@ -40,7 +40,7 @@
         </div>
     </nav>
 
-    <!-- Email Signup Section -->
+   <!-- Email Signup Section -->
     <section class="container-fluid bg-warning text-dark py-2 text-center mt-5">
         <form class="d-flex justify-content-center" id="email-signup-form">
             <label for="email-signup" class="me-2 fw-bold">Sign up for emails from STEAM with Ms. Jean:</label>
@@ -69,10 +69,10 @@
                 body: 'email=' + encodeURIComponent(email)
             }).then(response => {
                 if (response.ok) {
-                    document.getElementById("success-popup").style.display = "block";
                     document.getElementById("success-popup-overlay").style.display = "block";
+                    document.getElementById("success-popup").style.display = "block";
                 }
-            });
+            }).catch(error => console.error('Error:', error));
         });
         
         function closeSuccessPopup() {
@@ -80,7 +80,6 @@
             document.getElementById("success-popup-overlay").style.display = "none";
         }
     </script>
-
     
     <!-- Class Grid -->
     <section class="container my-5">
