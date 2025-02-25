@@ -36,23 +36,47 @@
     <!-- Class Grid -->
     <section class="container my-5">
         <div class="row g-4">
-            <div class="col-md-4 col-sm-6" onclick="openPopup('Class 1')">
-                <div class="card p-3 text-center">Class 1</div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Introduction to Coding')">
+                <div class="card p-3 text-center">
+                    <img src="coding.jpg" class="img-fluid" alt="Coding Class">
+                    <h5 class="mt-2">Introduction to Coding</h5>
+                    <p>Learn the basics of programming with fun, hands-on activities.</p>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6" onclick="openPopup('Class 2')">
-                <div class="card p-3 text-center">Class 2</div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Robotics for Beginners')">
+                <div class="card p-3 text-center">
+                    <img src="robotics.jpg" class="img-fluid" alt="Robotics Class">
+                    <h5 class="mt-2">Robotics for Beginners</h5>
+                    <p>Build and program robots using beginner-friendly kits.</p>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6" onclick="openPopup('Class 3')">
-                <div class="card p-3 text-center">Class 3</div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Creative 3D Design')">
+                <div class="card p-3 text-center">
+                    <img src="3d_design.jpg" class="img-fluid" alt="3D Design Class">
+                    <h5 class="mt-2">Creative 3D Design</h5>
+                    <p>Design and print 3D models using beginner-friendly software.</p>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6" onclick="openPopup('Class 4')">
-                <div class="card p-3 text-center">Class 4</div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Circuit Fundamentals')">
+                <div class="card p-3 text-center">
+                    <img src="circuits.jpg" class="img-fluid" alt="Circuits Class">
+                    <h5 class="mt-2">Circuit Fundamentals</h5>
+                    <p>Learn the basics of electrical circuits and build simple projects.</p>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6" onclick="openPopup('Class 5')">
-                <div class="card p-3 text-center">Class 5</div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('STEAM Art & Design')">
+                <div class="card p-3 text-center">
+                    <img src="art_design.jpg" class="img-fluid" alt="Art and Design Class">
+                    <h5 class="mt-2">STEAM Art & Design</h5>
+                    <p>Explore the intersection of technology and creativity through art projects.</p>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6" onclick="openPopup('Class 6')">
-                <div class="card p-3 text-center">Class 6</div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Engineering Challenges')">
+                <div class="card p-3 text-center">
+                    <img src="engineering.jpg" class="img-fluid" alt="Engineering Class">
+                    <h5 class="mt-2">Engineering Challenges</h5>
+                    <p>Solve fun and interactive engineering problems with hands-on activities.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -91,33 +115,5 @@
     <footer class="text-center py-3 bg-light">
         <p>&copy; 2025 STEAM with Ms. Jean | <a href="https://www.instagram.com/mathwithmsjean/">Instagram</a> | <a href="https://mathwithmsjean.org">Math with Ms. Jean</a></p>
     </footer>
-
-    <!-- Popup Script -->
-    <script>
-        function openPopup(classTitle) {
-            document.getElementById("popupTitle").innerText = classTitle;
-            document.getElementById("classPopup").style.display = "block";
-        }
-        function closePopup() {
-            document.getElementById("classPopup").style.display = "none";
-        }
-    </script>
-
-    <style>
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-        }
-        .popup-content { text-align: center; }
-        .close { cursor: pointer; float: right; }
-    </style>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
