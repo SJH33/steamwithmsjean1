@@ -27,6 +27,28 @@
         </div>
     </nav>
 
+    <!-- Email Signup Section -->
+    <section class="container-fluid bg-warning text-dark py-2 text-center">
+        <form class="d-flex justify-content-center" onsubmit="return validateEmail()">
+            <label for="email-signup" class="me-2 fw-bold">Sign up for emails from STEAM with Ms. Jean:</label>
+            <input type="email" id="email-signup" class="form-control w-auto" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-dark ms-2">Sign Up</button>
+        </form>
+    </section>
+
+    <script>
+        function validateEmail() {
+            var email = document.getElementById("email-signup").value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            alert("Thank you for signing up!");
+            return true;
+        }
+    </script>
+
     <!-- Welcome Section -->
     <section class="container text-center my-5 pt-5">
         <h1>Welcome to STEAM with Ms. Jean</h1>
@@ -80,15 +102,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Class Popup -->
-    <div id="classPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2 id="popupTitle"></h2>
-            <button class="btn btn-primary">Sign Up</button>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-light">
