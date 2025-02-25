@@ -8,12 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        .card { height: 100%; display: flex; flex-direction: column; }
+        .card { height: 100%; display: flex; flex-direction: column; cursor: pointer; }
         .card img { max-height: 200px; object-fit: cover; }
-        .popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5); z-index: 10; }
-        .popup-content { text-align: center; }
-        .close { cursor: pointer; float: right; }
-        .popup-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9; }
     </style>
 </head>
 <body>
@@ -41,7 +37,7 @@
     </nav>
 
     <!-- Email Signup Section -->
-    <section class="container-fluid bg-warning text-dark py-2 text-center">
+    <section class="container-fluid bg-warning text-dark py-2 text-center mt-5">
         <form class="d-flex justify-content-center" onsubmit="return validateEmail()">
             <label for="email-signup" class="me-2 fw-bold">Sign up for emails from STEAM with Ms. Jean:</label>
             <input type="email" id="email-signup" class="form-control w-auto" placeholder="Enter your email" required>
@@ -53,42 +49,42 @@
     <section class="container my-5">
         <div class="row g-4">
             <div class="col-md-4 col-sm-6">
-                <div class="card p-3 text-center" onclick="openPopup('Introduction to Coding', 'Learn the basics of programming with fun, hands-on activities.')">
+                <div class="card p-3 text-center" onclick="openPopup('coding.html')">
                     <img src="https://cms-assets.themuse.com/media/lead/01212022-1047259374-coding-classes_scanrail.jpg" class="img-fluid" alt="Coding Class">
                     <h5 class="mt-2">Introduction to Coding</h5>
                     <p>Learn the basics of programming with fun, hands-on activities.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="card p-3 text-center" onclick="openPopup('Robotics for Beginners', 'Build and program robots using beginner-friendly kits.')">
+                <div class="card p-3 text-center" onclick="openPopup('robotics.html')">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp_hdcTrM_BbZnil28zVMTRcQUG91WDv8ylg&s" class="img-fluid" alt="Robotics Class">
                     <h5 class="mt-2">Robotics for Beginners</h5>
                     <p>Build and program robots using beginner-friendly kits.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="card p-3 text-center" onclick="openPopup('Creative 3D Design', 'Design and print 3D models using beginner-friendly software.')">
+                <div class="card p-3 text-center" onclick="openPopup('3d-design.html')">
                     <img src="https://vivaldi.com/wp-content/uploads/2017/06/ndc-workshop-3d.jpg" class="img-fluid" alt="3D Design Class">
                     <h5 class="mt-2">Creative 3D Design</h5>
                     <p>Design and print 3D models using beginner-friendly software.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="card p-3 text-center" onclick="openPopup('Circuit Fundamentals', 'Learn the basics of electrical circuits and build simple projects.')">
+                <div class="card p-3 text-center" onclick="openPopup('circuits.html')">
                     <img src="https://cdn.britannica.com/42/100742-004-9C5F5E40.jpg" class="img-fluid" alt="Circuits Class">
                     <h5 class="mt-2">Circuit Fundamentals</h5>
                     <p>Learn the basics of electrical circuits and build simple projects.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="card p-3 text-center" onclick="openPopup('STEAM Art & Design', 'Explore the intersection of technology and creativity through art projects.')">
+                <div class="card p-3 text-center" onclick="openPopup('steam-art.html')">
                     <img src="https://innovationkidslab.com/wp-content/uploads/2015/04/artbot_fb_sm_size.jpg" class="img-fluid" alt="Art and Design Class">
                     <h5 class="mt-2">STEAM Art & Design</h5>
                     <p>Explore the intersection of technology and creativity through art projects.</p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="card p-3 text-center" onclick="openPopup('Engineering Challenges', 'Solve fun and interactive engineering problems with hands-on activities.')">
+                <div class="card p-3 text-center" onclick="openPopup('engineering.html')">
                     <img src="https://cambridgedaymediafiles.s3.amazonaws.com/public_html/wp-content/uploads/2018/09/27175850/090118i-Engineering-is-Elementary.jpg" class="img-fluid" alt="Engineering Class">
                     <h5 class="mt-2">Engineering Challenges</h5>
                     <p>Solve fun and interactive engineering problems with hands-on activities.</p>
@@ -96,6 +92,12 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function openPopup(url) {
+            window.open(url, '_blank', 'width=600,height=600');
+        }
+    </script>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-light">
