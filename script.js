@@ -28,3 +28,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+  function openPopup(title, description) {
+            document.getElementById("popup-title").innerText = title;
+            document.getElementById("popup-description").innerText = description;
+            document.getElementById("class-popup-overlay").style.display = "block";
+            document.getElementById("class-popup").style.display = "block";
+        }
+        
+        function closePopup() {
+            document.getElementById("class-popup").style.display = "none";
+            document.getElementById("class-popup-overlay").style.display = "none";
+        }
+
+    
