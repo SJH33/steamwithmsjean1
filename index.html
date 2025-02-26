@@ -58,6 +58,29 @@
         <button class="btn btn-primary" onclick="closeSuccessPopup()">Close</button>
     </div>
 
+    <script>
+        document.getElementById("email-signup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents the form from redirecting
+            var email = document.getElementById("email-signup").value;
+            
+            fetch('https://script.google.com/macros/s/AKfycbwrTjbBJKhfca2lsmi0JwTYfwfTXOrFAAmuNQgxgPabuln7SYSpmkucAtiOa11euy8/exec', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'email=' + encodeURIComponent(email)
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById("success-popup-overlay").style.display = "block";
+                    document.getElementById("success-popup").style.display = "block";
+                }
+            }).catch(error => console.error('Error:', error));
+        });
+        
+        function closeSuccessPopup() {
+            document.getElementById("success-popup").style.display = "none";
+            document.getElementById("success-popup-overlay").style.display = "none";
+        }
+    </script>
+
    
 
 
@@ -114,32 +137,7 @@
         <p>&copy; 2025 STEAM with Ms. Jean | <a href="https://www.instagram.com/mathwithmsjean/">Instagram</a> | <a href="https://mathwithmsjean.org">Math with Ms. Jean</a></p>
     </footer>
 
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("email-signup-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form redirection
-        var email = document.getElementById("email-signup").value;
-        
-        fetch('https://script.google.com/macros/s/AKfycbwrTjbBJKhfca2lsmi0JwTYfwfTXOrFAAmuNQgxgPabuln7SYSpmkucAtiOa11euy8/exec', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: 'email=' + encodeURIComponent(email)
-        }).then(response => {
-            if (response.ok) {
-                document.getElementById("success-popup-overlay").style.display = "block";
-                document.getElementById("success-popup").style.display = "block";
-            }
-        }).catch(error => console.error('Error:', error));
-    });
-    
-    window.closeSuccessPopup = function() {
-        document.getElementById("success-popup").style.display = "none";
-        document.getElementById("success-popup-overlay").style.display = "none";
-        // Clear the email input field
-        document.getElementById("email-signup").value = "";
-    }
-});
-</script>
+
 
 </body>
 </html>
