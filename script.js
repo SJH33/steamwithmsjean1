@@ -42,3 +42,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
     
+document.addEventListener("DOMContentLoaded", function() {
+    const signupForm = document.getElementById("signup-form");
+
+    if (signupForm) {
+        signupForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            // Simulate sending data (You can integrate a backend later)
+            console.log("User Info:", { name, email, password });
+
+            // Show success message (Modify as needed)
+            alert("Sign-up successful! Welcome, " + name);
+
+            // Redirect to homepage after sign-up
+            window.location.href = "index.html";
+        });
+    }
+});
