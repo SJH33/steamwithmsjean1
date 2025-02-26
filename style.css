@@ -79,26 +79,38 @@ body {
 }
 
 /* ========================= */
-/* FIXED EMAIL SIGNUP BAND */
+/* FIXED EMAIL SIGNUP BAND BELOW NAVBAR */
 /* ========================= */
 
 .email-signup {
-    position: fixed;
-    top: 80px; /* Adjust based on navbar height */
+    position: sticky;
+    top: 0;
     left: 0;
     width: 100%;
     background: #ffc107; /* Bootstrap warning yellow */
     color: #333;
     text-align: center;
     padding: 15px 0; /* Adjust padding for better spacing */
-    z-index: 998; /* Ensure it stays above other content */
+    z-index: 1030; /* Higher z-index to stay above content */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
-/* Adjust body padding to prevent overlap */
-body {
-    padding-top: 140px; /* Increase to accommodate the fixed signup bar */
+/* Ensure the navbar remains fixed */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; /* Higher than email signup to stay on top */
+    background: #fff; /* Ensures navbar is visible */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
+
+/* Prevent content from being hidden behind navbar and email bar */
+body {
+    padding-top: 140px; /* Adjust this based on navbar + signup bar height */
+}
+
 
 
 /* ========================= */
