@@ -1,15 +1,53 @@
+/* ========================= */
+/* GLOBAL STYLES */
+/* ========================= */
+
+/* Ensure content is pushed down below navbar */
 body {
     padding-top: 100px; /* Adjust based on navbar height */
 }
 
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
 
-/* Hide by default */
+.navbar-brand img {
+    max-height: 80px; /* Adjust logo size as needed */
+    width: auto;
+}
+
+/* ========================= */
+/* BUTTON STYLES */
+/* ========================= */
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* ========================= */
+/* CARD STYLES */
+/* ========================= */
+
+.card {
+    border-radius: 10px;
+}
+
+/* ========================= */
+/* EMAIL SIGNUP POPUP */
+/* ========================= */
+
+/* Hide success popup by default */
 .success-popup-overlay,
 .success-popup {
     display: none;
 }
 
-/* Overlay styling */
+/* Overlay background */
 .success-popup-overlay {
     position: fixed;
     top: 0;
@@ -20,7 +58,7 @@ body {
     z-index: 999;
 }
 
-/* Popup styling */
+/* Popup window */
 .success-popup {
     position: fixed;
     top: 50%;
@@ -34,17 +72,17 @@ body {
     text-align: center; /* Centers text content */
 }
 
+/* Center "Close" button */
 .success-popup button {
     display: block;
-    margin: 10px auto; /* Centers button horizontally */
+    margin: 10px auto;
 }
 
+/* ========================= */
+/* CLASS DETAILS POPUP */
+/* ========================= */
 
-.navbar-brand img {
-    max-height: 80px; /* Adjust size as needed */
-    width: auto;
-}
-
+/* Hide popups by default */
 .popup-overlay {
     display: none;
     position: fixed;
@@ -56,6 +94,7 @@ body {
     z-index: 999;
 }
 
+/* Popup container */
 .popup {
     display: none;
     position: fixed;
@@ -72,112 +111,17 @@ body {
     text-align: center;
 }
 
+/* Popup heading */
 .popup h2 {
     margin-bottom: 15px;
 }
 
+/* Popup paragraphs */
 .popup p {
     margin-bottom: 20px;
 }
 
-.popup .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.card {
-    border-radius: 10px;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    z-index: 1000;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-}
-
-.popup .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    window.openPopup = function(title, description, dates) {
-        document.getElementById("popup-title").innerText = title;
-        document.getElementById("popup-description").innerText = description;
-        document.getElementById("popup-dates").innerText = dates;
-        document.getElementById("class-popup-overlay").style.display = "block";
-        document.getElementById("class-popup").style.display = "block";
-    };
-
-    window.closePopup = function() {
-        document.getElementById("class-popup").style.display = "none";
-        document.getElementById("class-popup-overlay").style.display = "none";
-    };
-});
-
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    z-index: 1000;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-}
-
+/* Popup close button */
 .popup .close {
     position: absolute;
     top: 10px;
