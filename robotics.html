@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Classes | STEAM with Ms. Jean</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="STEAM with Ms. Jean" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coding.html">Coding</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="robotics.html">Robotics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="3dprinting.html">3D Printing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Circuits</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="container mt-5 pt-5">
+        <h1 class="text-center mb-4">Robotics Classes</h1>
+    </section>
+
+    <!-- Robotics Classes Grid -->
+    <section class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Intro to Robotics - 6-week program', 'Learn the basics of robotics and build simple robotic projects. (Ages 10+)', 'Session Dates: Mondays & Wednesdays 4:00 - 5:30 PM')">
+                <div class="card p-3 text-center">
+                    <h5 class="mt-2">Intro to Robotics</h5>
+                    <p>Learn the basics of robotics (Ages 10+).</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Building Robots with LEGO - 6-week program', 'Use LEGO robotics kits to build and program fun robots! (Ages 8-12)', 'Session Dates: Tuesdays & Thursdays 4:00 - 5:30 PM')">
+                <div class="card p-3 text-center">
+                    <h5 class="mt-2">Building Robots with LEGO</h5>
+                    <p>Build and program LEGO robots (Ages 8-12).</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Advanced Robotics - 8-week program', 'Work on complex robotic projects and learn advanced programming. (Ages 12+)', 'Session Dates: Saturdays 10:00 AM - 11:30 AM')">
+                <div class="card p-3 text-center">
+                    <h5 class="mt-2">Advanced Robotics</h5>
+                    <p>Learn advanced robotics and coding (Ages 12+).</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Arduino Robotics - 6-week program', 'Learn how to build and code robots using Arduino microcontrollers. (Ages 12+)', 'Session Dates: Mondays 5:30 - 7:00 PM')">
+                <div class="card p-3 text-center">
+                    <h5 class="mt-2">Arduino Robotics</h5>
+                    <p>Build and program robots with Arduino (Ages 12+).</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('Battle Bots Challenge - 6-week program', 'Design, build, and compete in a fun robot battle! (Ages 10-14)', 'Session Dates: Wednesdays 5:30 - 7:00 PM')">
+                <div class="card p-3 text-center">
+                    <h5 class="mt-2">Battle Bots Challenge</h5>
+                    <p>Compete in a fun robot battle (Ages 10-14).</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6" onclick="openPopup('AI-Powered Robotics - 8-week program', 'Learn how artificial intelligence is used in robotics and build your own AI-powered robot! (Ages 12+)', 'Session Dates: Fridays 4:00 - 5:30 PM')">
+                <div class="card p-3 text-center">
+                    <h5 class="mt-2">AI-Powered Robotics</h5>
+                    <p>Build AI-powered robots (Ages 12+).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Class Details Popup -->
+    <div id="class-popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+    <div id="class-popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-description"></p>
+        <p id="popup-dates"></p>
+        <button class="btn btn-primary" onclick="window.location.href='signup.html'">Sign Up Now</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
