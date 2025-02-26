@@ -26,7 +26,14 @@
     border-radius: 8px;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers text content */
 }
+
+.success-popup button {
+    display: block;
+    margin: 10px auto; /* Centers button horizontally */
+}
+
 
 .navbar-brand img {
     max-height: 80px; /* Adjust size as needed */
