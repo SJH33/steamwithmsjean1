@@ -65,3 +65,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.openPopup = function(title, description, dates) {
+        document.getElementById("popup-title").innerText = title;
+        document.getElementById("popup-description").innerText = description;
+        document.getElementById("popup-dates").innerText = dates;
+        document.getElementById("class-popup-overlay").style.display = "block";
+        document.getElementById("class-popup").style.display = "block";
+    };
+
+    window.closePopup = function() {
+        document.getElementById("class-popup").style.display = "none";
+        document.getElementById("class-popup-overlay").style.display = "none";
+    };
+});
