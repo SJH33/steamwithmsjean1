@@ -74,12 +74,16 @@
                 }
             }).catch(error => console.error('Error:', error));
         });
-        
-        function closeSuccessPopup() {
-            document.getElementById("success-popup").style.display = "none";
-            document.getElementById("success-popup-overlay").style.display = "none";
-        }
-    </script>
+        <script>
+            function closeSuccessPopup() {
+                document.getElementById("success-popup").style.display = "none";
+                document.getElementById("success-popup-overlay").style.display = "none";
+                // Clear the email input field
+                document.getElementById("email-signup").value = "";
+            }
+        </script>
+
+
     
     <!-- Class Grid -->
     <section class="container my-5">
