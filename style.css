@@ -27,3 +27,8 @@
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.navbar-brand img {
+    max-height: 50px; /* Adjust size as needed */
+    width: auto;
+}
