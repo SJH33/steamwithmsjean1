@@ -98,7 +98,7 @@ body {
 
 .email-signup {
     position: fixed;
-    top: 80px; /* Adjust based on navbar height */
+    top: 100px; /* Adjust based on navbar height */
     left: 0;
     width: 100%;
     background: #ffc107; /* Bootstrap warning yellow */
@@ -111,7 +111,7 @@ body {
 
 /* Ensure content does not get hidden behind navbar and email band */
 body {
-    padding-top: 120px; /* Adjust this to fit both the navbar and signup band */
+    padding-top: 140px; /* Adjust this to fit both the navbar and signup band */
 }
 
 
