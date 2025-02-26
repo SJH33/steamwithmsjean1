@@ -108,7 +108,7 @@ body {
 
 /* Prevent content from being hidden behind navbar and email bar */
 body {
-    padding-top: 140px; /* Adjust this based on navbar + signup bar height */
+    padding-top: 120px; /* Adjust this based on navbar + signup bar height */
 }
 
 
