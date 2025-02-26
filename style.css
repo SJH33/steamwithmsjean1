@@ -1,3 +1,8 @@
+body {
+    padding-top: 100px; /* Adjust based on navbar height */
+}
+
+
 /* Hide by default */
 .success-popup-overlay,
 .success-popup {
