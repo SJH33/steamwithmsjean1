@@ -5,7 +5,7 @@
 /* Ensure content is pushed down below navbar */
 body {
     padding-top: 100px; /* Adjust based on navbar height */
-    font-family: Helvetica;
+    font-family: "Proxima Nova", Helvetica;
 }
 
 /* ========================= */
