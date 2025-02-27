@@ -6,6 +6,7 @@
 body {
     padding-top: 100px; /* Adjust based on navbar height */
     font-family: "Proxima Nova", Helvetica;
+    font-size: 16px;
 }
 
 /* ========================= */
