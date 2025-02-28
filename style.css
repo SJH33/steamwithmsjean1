@@ -279,3 +279,23 @@ body {
     width: 80px; /* Adjust icon size */
     height: 80px;
 }
+
+
+.category-card {
+    background: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    background: #e9ecef; /* Slightly darker background on hover */
+}
+
+.category-icon {
+    width: 80px; /* Adjust icon size */
+    height: 80px;
+}
